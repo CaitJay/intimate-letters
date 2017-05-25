@@ -1,0 +1,13 @@
+<html>
+<head> 
+<title>intimateletters</title>
+</head>
+<body>
+  <hr style="border-top: dotted 1px;" />
+</body> 
+</html>
+
+
+//<hr> will add a line. How to change the colour? 
+//1px means the size? 
+//what happens if "border-left" is used?
