@@ -13,6 +13,8 @@ one compared to the other and what info does it get from both items?
 //what is a line? 
 // How do I make a single line appear in html?
 // How do I make a dot appear in html?
+
+
 To Explore Later:
 
 //tracking.js libraries that use colour tracking algorithms? 
@@ -29,14 +31,12 @@ Test 1 for “boxed”
 Test 2 for border-top
 
 
-
 //does it not work because I have to declare a variable first? Does border-top need to be defined? 
 //can <div></div> function alone?
 //yes - because it works with this -> div id="awesome">sauce</div> //declares sauce
 
-Test 3 for <hr>
 
-   <hr width="200" align="left">
+Test 3 for <hr>
 
 //200= what? 
 //Align = left of the page? 
