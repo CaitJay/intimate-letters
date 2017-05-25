@@ -1,0 +1,10 @@
+<html>
+<head> 
+<title>intimateletters</title>
+</head>
+<body>
+  <div style="width:500px;height:100px;border:1px solid #000;">Large Rectangle</div>
+</body> 
+</html>
+
+//width at 100px and height at 100px = square?
