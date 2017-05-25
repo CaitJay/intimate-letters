@@ -24,19 +24,15 @@ To Explore Later:
 Test 1 for “boxed” 
 
 //found the first line but I don't understand what "boxed" means. Content inside the div doesn't seem to be any different than adding the content to the body.
-<div class="boxed">
-  Test for boxed.
-</div>
+
 
 Test 2 for border-top
 
- <div.content {
-  border-top: 1px solid black;
-}></div.content>
+
 
 //does it not work because I have to declare a variable first? Does border-top need to be defined? 
 //can <div></div> function alone?
-//yes - because it works with this -> <div id="awesome">sauce</div> //declares sauce
+//yes - because it works with this -> div id="awesome">sauce</div> //declares sauce
 
 Test 3 for <hr>
 
