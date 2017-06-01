@@ -1,0 +1,33 @@
+//declare function first?
+
+function NameMe(){
+
+var x = document.getElementById("DrawText"); //call this first to access drawing context in next line
+    //w3 example has var ctx. What is that?
+    var img = document.getElementById("handwriting")//img id goes here
+var ctx = canvas.getContext('2d'); //do I put x where canvas is? 
+ctx.drawImage(img, 90, 130, 50, 60, 10, 10, 50, 60); // (img, x, y) x=width?, y=height?, img is calling the image?
+}; 
+
+//ctx is short for context - is only used as a name for a variable. can name it anything.
+
+
+
+//my canvas id needs to be put into var x () ? 
+
+
+//the default size of the canvas is width = 300 px and height = 150 px? But can be readjusted?
+//context object is used to draw graphics on the canvas
+//what is the canvas?
+
+//canvas is an element in Webkit that draws 2D graphics?
+//only two attributes to canvas - width and height 
+
+
+
+//function () {
+//var img = document.querySelector('#step2 img');
+//need to set up canvas so js can type out text from image?
+//need to draw text using canvas 
+
+//How to use this? -> <script src="ocrad.js"></script> <input type="file" accept="image/*">
