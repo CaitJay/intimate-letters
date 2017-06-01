@@ -1,0 +1,7 @@
+function NameMe(){
+    
+var x = document.getElementById("DrawText");
+var ctx = x.getContext("2d");
+ctx.font = "50px Arial";
+ctx.fillText("DrawText",50,50);
+                 };
