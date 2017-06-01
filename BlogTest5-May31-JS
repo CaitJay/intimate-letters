@@ -1,0 +1,24 @@
+//what is the $ symbol and how do you define this?
+
+//what is the .ready?
+
+//why does $ symbol go with img?
+//what is #img?
+
+//does the $ symbol mean it is jQuery?
+
+//$ symbol is treated like a normal letter. Can be used as Var $, like using var x
+
+
+$(document).ready(function() {
+    var $img = $('#image');
+
+    var context = document.createElement('canvas').getContext('2d');
+    context.drawImage($img[0], 0, 0);
+
+    var imageData = context.getImageData(0, 0, $img.width(), $img.height());
+
+    var string = OCRAD(imageData);
+    alert(string);
+});
+    
