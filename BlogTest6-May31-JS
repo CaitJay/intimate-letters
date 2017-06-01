@@ -1,0 +1,17 @@
+//replacing $ symbol - find it confusing
+
+x(document).ready(function() {
+    var ximg = x('#image');
+
+    var context = document.createElement('canvas').getContext('2d');
+    context.drawImage(ximg[0], 0, 0);
+
+    var imageData = context.getImageData(0, 0, ximg.width(), ximg.height());
+
+    var string = OCRAD(imageData);
+    alert(string);
+});
+
+//why do you declare var ximg?
+//jQuery is a set of JavaScript libraries. 
+//Do I have to stay with $ symbol because it's already established in the library?
