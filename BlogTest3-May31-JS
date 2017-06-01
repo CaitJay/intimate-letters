@@ -1,0 +1,23 @@
+//<Script src=ocrad.js></script>
+//define OCRAD?
+//define ctx?
+
+//how to define ocrad? with Function? 
+
+function Cropping(){
+    
+    var ctx = canvas.getContext('2d');
+        ctx.drawImage //what goes here?
+    
+    
+var resultText = ocrad.js;
+        resultText = resultText.trim();
+
+    
+//does reultText need to be defined?
+$('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
+        $('blockquote footer').text('(' + resultText.length + ' characters)')
+    }
+
+
+//need "Cropping" image in next function?
