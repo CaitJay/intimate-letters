@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    
+    <h1>Original Image</h1>
+    
+    <img id="handwriting" src="Image1.jpg" alt="Letter" width="220" height="277">
+
+    
+    <h2>Cropped Image</h2>
+    <canvas id="DrawText" 
+    width="100px" 
+    height="100px">
+    </canvas> <!-- needs to be closed with this tag-->
+    <!-- Canvas is blank until something is added to it. It needs getContext to draw functions--> 
+    
+    </body>
+
+</html>
