@@ -1,0 +1,37 @@
+/* I found a a way to draw using the mouse but I don't understand what any of it means. In this file I'm going to break down each line until I've figured it out*/
+
+
+function initialise (){
+    
+ var canvas=document.getElementById("canvas_1"); 
+ canvas.addEventListener('mousemove', ev_mousemove, false); 
+}
+
+/*how are these two lines different?
+what is "addEventListener"?
+What is the "false" for?
+
+
+canvas is the object.
+
+addEventListener - attaches an event to an element
+
+In order to attach something, it's asking that if the mouse moves the output will be whatever is stated in the getElementById. 
+
+ev means event? 
+Mouse Events - is onmousemove the same as ev_mousemove?
+
+so, can I use this?
+<div onmouseenter="myEnterFunction()">
+  <p>onmouseenter: <br> <span id="demo2">Mouse over me!</span></p>
+</div>
+*/
+
+ 
+
+/* To Do Later - break down by mouse movements - up, down right, left, horizontal?, circle?
+*/
+
+/* want to add in a "save" button and a "clear" button. Possibly a "preview button? */
+
+/* add a function for mouse clicking and moving, not just moving across page to create drawing*/
