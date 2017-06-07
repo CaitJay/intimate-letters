@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"> 
+   
+<head>
+    <meta charset="utf-8"> 
+      <title>DrawingWords</title>
+   </head>
+    <body>
+       
+       <div id="box"></div>
+       <!-- moved canvas id into body, was in header before -->
+       <canvas id="My Canvas" width="400" height="300" style="boder: 2px solid black"></canvas>
+    
+       <!-- Does canvas id go inside div id?-->
+       
+       <!-- need a script tag? to connect html page to JS -->
+      
+       <script src='JavaScriptDraw'></script>
+       
+    </body> 
+</html>
