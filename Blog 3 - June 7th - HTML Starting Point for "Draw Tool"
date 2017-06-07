@@ -1,0 +1,69 @@
+ 
+<!-- writing a canvas web app for drawing -->
+
+<!-- 1. need an element and an id
+
+2. need a script to connect to JS
+
+3. need a function for mouse movement -->
+
+<!DOCTYPE html>
+<html lang="en"> 
+    
+    <!--why does it need lang="en"? Can it just be <html> on its own? -->
+    
+<head>
+    <meta charset="utf-8"> 
+    
+    <!--UTF= Unicode Transformation Format, is part of the Unicode Standard? 
+
+Unicode = a set of characters with unique decimal numbers. 
+
+Encoding = how numbers are translated into binary numbers.
+
+Default for HTML5 is UTF-8, it is encoding.
+
+Encoding must be declared using a <meta> element.
+
+It needs a <charset> attribute. It must be inside the <head>
+
+What is a meta element? 
+It is saying, "some info about this document". Not always a part of document but could be about it. 
+
+What is a charset attribute?
+Specifies character encodig for the document.
+
+Does it need a viewport element?
+
+What does it do? 
+I think it helps the text render on the screen...
+
+<canvas id is needed because I'm drawing graphics using JS.
+the <canvas> tag is a container for the graphics but need the <script> tag for JS to draw the graphics.
+
+Need to specify attributes with height and width? -->
+    
+     <canvas id="My Canvas" width="400" height="300" style="boder: 2px solid black"></canvas>
+      
+    <title>DrawingWords</title>
+    <style>
+    /* what goes in here? 
+        use this space for colours and fonts (elements of html in a browser) - for CSS */
+        
+        
+    </style>
+    
+    </head>
+    
+   <body>
+    <!-- need to draw a box where the mouse can "write" inside"-->
+       
+       <div id="box"></div>
+
+    
+    </body> 
+    
+
+
+
+</html>
