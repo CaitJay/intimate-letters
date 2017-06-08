@@ -1,0 +1,60 @@
+function initialise (){
+    
+ var canvas=document.getElementById("canvas_1"); 
+ canvas.addEventListener('mousemove',ev_mousemove, false); 
+    
+}
+/* the function is ev_mousemove? and false is the event?
+
+false means cancelable? 
+is this polling? 
+want to give the code a chance to react to the event as it occurs?
+So mousemove is an event handler?
+
+false is the boolean value */
+
+var started = false;
+function ev_mousemove (ev){
+    var x, y;
+}
+
+/* var can't be x because x is used as a mouse position with y later on. 
+
+what is ev? Event? Part of Drag and Drop?
+
+when you use an event on an element, the debugger tool places "ev" there to let you know that an event is attached? It has an event listener. 
+
+
+/* add in "if, else" to assign positions to x and y for the mouse?
+*/
+
+if (ev.layerX) || ev.layerX==0){
+    x = ev.layerX;
+    y = ev.layerY;    
+}
+
+/* what is ev.layerX? 
+it should add the event objects to be used in drawing canvas - plotting coordinates relative to the canvas as vertical and horizontal for the mouse cursor
+
+so, ev.layerX is specific to a certain brwoser and offsetX is for another browser
+
+this line - (ev.layerX) || ev.layerX==0) is saying that the condition, ev.layerX, is false if it doesnt exist for the browser or does exist with value 0 
+
+this is a command to make sure the code wors in the browser
+
+should work for Firefox and Chrome */
+
+
+
+
+/*<script>
+  var lastX; // Tracks the last observed mouse X position
+  var rect = document.querySelector("div");
+  rect.addEventListener("mousedown", function(event) {
+    if (event.which == 1) {
+      lastX = event.pageX;
+      addEventListener("mousemove", moved);
+      event.preventDefault(); // Prevent selection
+    }
+  });
+</script> */ 
