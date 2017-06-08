@@ -1,0 +1,32 @@
+function initialise (){
+    
+ var canvas=document.getElementById("canvas_1"); 
+ canvas.addEventListener('mousemove', ev_mousemove, false); 
+}
+var started = false;
+function ev_mousemove (ev){
+    var x, y;
+}
+/* Tracking the mouse like a pencil - this is done with the event handler. It tracks the where the mouse moves and draws a line in its place */
+if (!started) {
+    context.beginPath();
+    context.moveTo(x, y);
+    started = true;    
+}
+
+/* what does the "!" mean? 
+It inverts a boolean expression, which means, if something is true, the function calling it would be false*/
+
+/* context.beginPath(); - it clears the current internal path and all sub-paths.
+It tells canvas to draw a new path. Without it, all drawings will merge together instead of staying separate. 
+the "()" can stay empty because it doesn't require any parameters. 
+
+What is a path?
+It is a sequence of lines. You can't give it values but can make a sequence of method calls to describe its shape. 
+*/
+
+/* context.moveTo(x, y); -  this starts a new path. A path needs to be closed before it can be filled. */
+
+what is "started = true;"? Wasn't started = false before?
+
+Is this because they are both booleans? and they both need to be stated to be used?
