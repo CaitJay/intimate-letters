@@ -1,0 +1,21 @@
+/* Need to introduce mouse movements, like up, down, move...
+this should happen in addEventListener */
+
+function initialise (){
+    
+ var canvas=document.getElementById("canvas_1"); 
+ canvas.addEventListener('mousemove', ev_mousemove, false); 
+canvas.addEventListener('mousedown', ev_canvas, false);
+}
+
+/* canvas.addEventListener('mousedown', ev_canvas, false); - why does it use ev_canvas instead of ev_mousemove? 
+
+ev_canvas is a function that invokes the mousedown method of the tool object. 
+Where is the tool object?
+
+does - tool.mousedown = function (ev) {} - solve the issue?
+
+need to use the tool in the tool_pencil function?
+
+Why is it still false? 
+
