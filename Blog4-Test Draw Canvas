@@ -1,0 +1,193 @@
+<html>
+
+<head></head>
+
+<body onload="InitThis();">
+
+    <!-- Trying to stop background from highlighting when clicked or hovered. Can't get listed lines to work:
+    
+   canvas {
+-webkit-tap-highlight-color: transparent;
+} </-->
+
+    <!--  -webkit-tap-highlight-color: rgba(0,0,0,0); </-->
+
+    <!-- .press-title a:hover { background-color: transparent; text-decoration: none; } </-->
+
+    <!-- background-color:transparent; </-->
+
+
+    <!-- #ID {
+    background-color:yellow;
+    }
+
+    #ID:hover{
+    background-color:white;
+    } </-->
+    <style></style>
+
+
+    <!-- <tr>
+    <td>  
+    <button id="btnUndo" class="btn btn-info">
+    Undo</button>
+    <button id="btnRedo" class="btn btn-info">
+    Redo</button></td>
+    </tr> 
+    </body></body>-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+
+
+    </script>
+    <script type="text/javascript" src="JsCode.js"></script>
+    <div align="center">
+        <canvas id="myCanvas" width="500" height="500" style="border:2px solid black"></canvas>
+        <br /><br />
+        <!-- <button id="btnUndo" class="btn btn-info">
+        Undo</button>
+        <button id="btnRedo" class="btn btn-info">
+        Redo</button> </-->
+        <button id="undo-button" onclick="history('undo')">Undo</button>
+        <button id="redo-button" onclick="history('redo')">Redo</button>
+
+        <button onclick="javascript:clearArea();return false;">Clear Area</button>
+        <script>
+            var mousePressed = false; //returns boolean
+            var lastX, lastY;
+            var ctx;
+            var undoElement = undefined;
+            var redoElement = undefined;
+            //assign undo and redo buttons
+
+            //Image Capture of drawing
+            //var canvas = document.getElementById("my-canvas");
+            // draw to canvas...
+            //canvas.toBlob(function(blob) {
+            //saveAs(blob, "pretty image.png");
+            // });
+
+
+            //doesnt stop screen flicker
+            //document.addEventListener("touchend", function(e) { e.preventDefault(); }, false);
+            //canvas.addEventListener("touchstart", function(e)
+            //e.preventDefault();
+            //}, false);
+            //<script 
+
+            // anything w/o a value is false. Anything with a value is true            
+            function InitThis() {
+                ctx = document.getElementById('myCanvas').getContext("2d");
+
+                $('#myCanvas').mousedown(function(e) {
+                    mousePressed = true;
+                    Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
+                });
+
+                $('#myCanvas').mousemove(function(e) {
+                    if (mousePressed) {
+                        Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
+                    }
+                });
+
+                $('#myCanvas').mouseup(function(e) {
+                    mousePressed = false;
+                });
+                $('#myCanvas').mouseleave(function(e) {
+                    mousePressed = false;
+                });
+            }
+
+            function Draw(x, y, isDown) {
+                if (isDown) {
+                    ctx.beginPath(); //helps mouse align with drawing line
+                    //ctx.strokeStyle = $('#selColor').val(); //doesn't seem to be needed
+                    ctx.lineWidth = $('#selWidth').val();
+                    //ctx.lineJoin = "round";
+                    ctx.moveTo(lastX, lastY); //need this line
+                    ctx.lineTo(x, y); //can't use draw w/o this line
+                    //ctx.closePath();
+                    ctx.stroke();
+                    ctx.fillStyle = "#FF0000";
+
+                }
+                lastX = x;
+                lastY = y;
+            }
+
+            function clearArea() {
+                // Use the identity matrix while clearing the canvas
+                //ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            }
+
+            function history(command) { // undo/redo button events.
+                var data;
+                if (command === "redo") {
+                    data = historyManager.redo(); // get data for redo
+                } else
+                if (command === "undo") {
+                    data = historyManager.undo(); // get data for undo
+                }
+                if (data !== undefined) { // if data has been found
+                    setColorLayer(data); // set the data
+                }
+
+            }
+
+
+
+            //function download(){
+            //var download = document.getElementById("download");
+            //var image = document.getElementById("canvas").toDataURL("image/png")
+            // .replace("image/png", "image/octet-stream");
+            //download.setAttribute("href", image);
+
+            //}
+
+            //function convertCanvasToImage(canvas) {
+            // var image = new Image();
+            // image.src = canvas.toDataURL("image/png");
+            //return image;
+
+            // undo: function () {
+            //this.shape.redraw({ fill: { color: this.prevColor } });
+            //},
+            //redo: function () {
+            //this.shape.redraw({ fill: { color: this.currColor } });
+
+            //<
+            //canvas id = canvas width = 200 height = 200 > < /canvas> <
+            //script >
+            //window.onload = function() {
+            // var canvas = document.getElementById("canvas");
+            //var context = canvas.getContext("2d");
+            //context.fillStyle = "green";
+            //context.fillRect(50, 50, 100, 100);
+            // no argument defaults to image/png; image/jpeg, etc also work on some
+            // implementations -- image/png is the only one that must be supported per spec.
+            //window.location = canvas.toDataURL("image/png");
+            //}
+
+
+            //2
+            //var canvas = document.getElementById("mycanvas");
+            //var image = canvas.toDataURL("image/png");
+
+
+            //document.write('<img src="' + image + '"/>');
+
+
+            //var imageMimes = ['image/png', 'image/bmp', 'image/gif', 'image/jpeg', 'image/tiff']; //Extend as necessary 
+            //var acceptedMimes = new Array();
+            // for (i = 0; i < imageMimes.length; i++) {
+            //if (canvas.toDataURL(imageMimes[i]).search(imageMimes[i]) >= 0) {
+            //acceptedMimes[acceptedMimes.length] = imageMimes[i];
+            //}
+            
+
+</script>
+</div>
+</body>
+
+</html>
