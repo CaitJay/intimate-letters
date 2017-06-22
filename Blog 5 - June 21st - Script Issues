@@ -1,0 +1,58 @@
+              
+source - http://antimatter15.com/ocrad.js/demo.html
+
+        <script>
+            function readText() {
+                var OCRAD = function()
+                var string = OCRAD(canvas);
+                console.log(string);
+                alert(string); //when clicking "Text Recognition" a dot appears in the pop-up window. Without drawing in canvas and clicking "text Recognition" a dot still appears, so not converting to a string? need to understand why
+                //was assuming before that problem is with shape of line in canvas draw but possibly an issue with string
+              
+              
+           
+           c.onmousedown = function(e){ drag = true; lastX = 0; lastY = 0; e.preventDefault(); c.onmousemove(e) }
+           //preventDefault - If this method is called, the default action of the event will not be triggered.
+           //what is the default action? event is onmousedown or move
+           //drag isn't declared in ocrad example. drag is just movement of mouse on canvas as default
+           
+			c.onmouseup   = function(e){ drag = false; e.preventDefault(); runOCR() }
+			c.onmousemove = function(e){
+				e.preventDefault()
+				var rect = c.getBoundingClientRect();
+				var r = 5;
+            //change my mouse movements and align with new function/
+            </script>
+               
+    <script> 
+               function dot(x, y) {
+                    o.beginPath()
+                    o.moveTo(x + r, y)
+                    o.arc(x, y, r, 0, Math.PI * 2)
+                    o.fill()
+                }
+                if (drag) {
+                    var x = e.clientX - rect.left,
+                        y = e.clientY - rect.top;
+
+                    if (lastX && lastY) {
+                        var dx = x - lastX,
+                            dy = y - lastY;
+                        var d = Math.sqrt(dx * dx + dy * dy);
+                        for (var i = 1; i < d; i += 2) {
+                            dot(lastX + dx / d * i, lastY + dy / d * i)
+                        }
+                    }
+                    dot(x, y);
+
+
+                    lastX = x;
+                    lastY = y;
+                }
+                
+
+                function clearArea() {
+                    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                }
+
+        </script>
